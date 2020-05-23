@@ -1,0 +1,38 @@
+<h1 class="heading01">Welcome User</h1>
+  <div class="align">
+    <div class="card">
+      <div class="head">
+        <div></div>
+        <a id="login" class="selected">Login</a>
+        <div></div>
+      </div>
+      <div class="tabs" >
+        <form class="form" [formGroup]="form" (ngSubmit)="form.valid && submit()">
+          <div class="inputs">
+            <div class="input">
+              <mat-form-field>
+                <input matInput placeholder="Enter your email" formControlName="email" type="email">
+                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                <!-- <img src="img/user.svg"> -->
+              </mat-form-field>
+            </div>
+            <div class="input">
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" type="password" formControlName="pass">
+                <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? '' : ''}}</mat-icon> -->
+                <!-- </button> -->
+                <!--<img src="img/pass.svg">-->
+              </mat-form-field>
+            
+              <mat-checkbox>Remember me</mat-checkbox>
+              </div>
+              <button mat-raised-button class="submit" type="submit">Sign in</button>
+              <br><br><a routerLink="register">Create Account</a>
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+
+
